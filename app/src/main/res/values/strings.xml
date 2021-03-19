@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Welcome, Cutie!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_text_1">This is First Fragment</string>
+    <string name="tab_text_2">This is Second Fragment</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Snacks and Foods</string>
+    <string name="slide_1_desc">Banyak pilihan cemilan dan makanan disini.</string>
+
+    <string name="slide_2_title">Movie Tickets</string>
+    <string name="slide_2_desc">Nonton sama teman? Sama pacar? Bisa kok!</string>
+
+    <string name="slide_3_title">Great Discounts</string>
+    <string name="slide_3_desc">Ada diskon menarik untuk pembelian tiket min. Rp 100.000,00.</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+</resources>
