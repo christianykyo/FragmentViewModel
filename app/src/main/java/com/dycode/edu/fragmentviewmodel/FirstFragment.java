@@ -16,6 +16,9 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class FirstFragment extends Fragment {
     private PageViewModel pageViewModel;
+    private PageViewModel2 pageViewModel2;
+    private PageViewModel3 pageViewModel3;
+    private PageViewModel4 pageViewModel4;
 
     public FirstFragment() {
 // Required empty public constructor
@@ -36,6 +39,12 @@ public class FirstFragment extends Fragment {
 // init ViewModel
         pageViewModel =
                 ViewModelProviders.of(requireActivity()).get(PageViewModel.class);
+        pageViewModel2 =
+                ViewModelProviders.of(requireActivity()).get(PageViewModel2.class);
+        pageViewModel3 =
+                ViewModelProviders.of(requireActivity()).get(PageViewModel3.class);
+        pageViewModel4 =
+                ViewModelProviders.of(requireActivity()).get(PageViewModel4.class);
     }
 
     @Override
@@ -49,7 +58,7 @@ public class FirstFragment extends Fragment {
             Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         TextInputEditText nameEditText =
-                view.findViewById(R.id.textInputTextName);
+                view.findViewById(R.id.inputNamaDepan);
 // Add Text Watcher on name input text
         nameEditText.addTextChangedListener(new TextWatcher() {
             @Override
@@ -61,6 +70,66 @@ public class FirstFragment extends Fragment {
             public void onTextChanged(CharSequence charSequence, int i,
                                       int i1, int i2) {
                 pageViewModel.setName(charSequence.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
+
+        TextInputEditText nameEditText2 =
+                view.findViewById(R.id.inputNamaBelakang);
+// Add Text Watcher on name input text
+        nameEditText2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int
+                    i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i,
+                                      int i1, int i2) {
+                pageViewModel2.setName(charSequence.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
+
+        TextInputEditText nameEditText3 =
+                view.findViewById(R.id.inputEmail);
+// Add Text Watcher on name input text
+        nameEditText3.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int
+                    i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i,
+                                      int i1, int i2) {
+                pageViewModel3.setName(charSequence.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
+
+        TextInputEditText nameEditText4 =
+                view.findViewById(R.id.inputAlamat);
+// Add Text Watcher on name input text
+        nameEditText4.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int
+                    i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i,
+                                      int i1, int i2) {
+                pageViewModel4.setName(charSequence.toString());
             }
 
             @Override

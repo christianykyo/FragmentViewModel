@@ -14,7 +14,10 @@ import androidx.lifecycle.ViewModelProviders;
 
 public class SecondFragment extends Fragment {
     private PageViewModel pageViewModel;
-    private TextView txtName;
+    private PageViewModel2 pageViewModel2;
+    private PageViewModel3 pageViewModel3;
+    private PageViewModel4 pageViewModel4;
+    private TextView txtName, txtName2, txtName3, txtName4;
 
     public SecondFragment() {
 // Required empty public constructor
@@ -35,6 +38,12 @@ public class SecondFragment extends Fragment {
 // initialise ViewModel here
         pageViewModel =
                 ViewModelProviders.of(requireActivity()).get(PageViewModel.class);
+        pageViewModel2 =
+                ViewModelProviders.of(requireActivity()).get(PageViewModel2.class);
+        pageViewModel3 =
+                ViewModelProviders.of(requireActivity()).get(PageViewModel3.class);
+        pageViewModel4 =
+                ViewModelProviders.of(requireActivity()).get(PageViewModel4.class);
     }
 
     @Override
@@ -55,6 +64,33 @@ public class SecondFragment extends Fragment {
                     @Override
                     public void onChanged(@Nullable String s) {
                         txtName.setText(s);
+                    }
+                });
+
+        txtName2 = view.findViewById(R.id.textViewName2);
+        pageViewModel2.getName().observe(requireActivity(), new
+                Observer<String>() {
+                    @Override
+                    public void onChanged(@Nullable String s2) {
+                        txtName2.setText(s2);
+                    }
+                });
+
+        txtName3 = view.findViewById(R.id.textViewName3);
+        pageViewModel3.getName().observe(requireActivity(), new
+                Observer<String>() {
+                    @Override
+                    public void onChanged(@Nullable String s3) {
+                        txtName3.setText(s3);
+                    }
+                });
+
+        txtName4 = view.findViewById(R.id.textViewName4);
+        pageViewModel4.getName().observe(requireActivity(), new
+                Observer<String>() {
+                    @Override
+                    public void onChanged(@Nullable String s4) {
+                        txtName4.setText(s4);
                     }
                 });
     }
